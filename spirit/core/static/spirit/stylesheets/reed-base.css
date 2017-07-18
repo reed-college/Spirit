@@ -6,52 +6,50 @@ changing things / overridng the original spirit style sheet, try using the !impo
 but be careful as it may also override code in this style sheet :) -corb */
 
 /* styling across all pages */
-html {
-  font-family: times;
-  font-size: 16px;
-  line-height: 24px;
-  color: white;
-  background-color: #85070A; }
+* {
+  box-sizing: border-box;
+}
 
 html {
+  font-size: 16px;
+  line-height: 24px;
+  color: black;
+  background-color: white;
   position: relative;
   min-height: 100%;
+  overflow-x: hidden;
 }
-.header {
-    margin: 5%;
-}
-a {
-  color: white;
-}
-a:hover {
-  color: #787562;
+
+body {
+  width: 100%;
 }
 
 
 /* governs styling of username in forum posts */
 .username {
-  color: white;
+  color: black;
   font-size: 17px;
   text-decoration: underline;
   background-color: #85070A !important;
 }
 
-/* governs header/banner thingy across all pages */
+/* governs header/banner across all pages */
 
-.header-logo {
+.header-banner {
     background-color: #85070A;
-    background-repeat: no-repeat;
-    background-size: 140px 150px;
     text-align: left;
-    margin: auto;
-    font-size: 30px;
-    color: white;
-    font-family: times, serif;
-    text-transform: uppercase;
+    padding-left: 40px; /*4.25rem; /*85px; */
+    margin: 0;
+    width: 100% !important;
 }
-.header-logo:hover {
-  color: white !important;
+
+#headertext {
+  font-family: times, serif;
+  text-align: left;
+  font-size: 1.875rem /* 1rem = 16px, 1.875rem = 30px */;
+  color: white;
 }
+
 .header-div {
   white-space: nowrap;
     overflow: hidden;
@@ -59,11 +57,10 @@ a:hover {
 
 .forumtopnav {
     overflow: hidden;
-    border-bottom: 4px solid white;
-    border-right: 4px solid white;
-    border-radius: 10px;
     width: 350px;
+    padding-top: 0;
 }
+
 .forumtopnav a {
     overflow: hidden;
     display: inline-block;
@@ -83,26 +80,12 @@ a:hover {
 }
 .forumtopnav a.active {
     background-color: #4CAF50;
-    color: white;
+    color: black;
 }
-
-/*.header-logo {
-  font-family: times;
-  text-transform: uppercase;
-  color: white;
-  border-bottom: 4px solid white;
-  border-radius: 8px;
-}
-.header-logo:hover {
-  color: black;
-  text-shadow: none;
-  border-bottom: 4px solid black;
-  border-radius: 8px;
-} */
 
 /* governs styling of the rows of forum posts on forum home page */
 .row-title a{
-  color: white !important;
+  color: black !important;
 }
 .row-title a:hover{
   color: #787562 !important;
@@ -114,7 +97,7 @@ a:hover {
   border-radius: 5px;
 }
 .menu a {
-  color: white;
+  color: black;
 }
 .menu a:hover {
   color: #787562;
@@ -125,7 +108,7 @@ a:hover {
   text-transform: none;
 }
 .dropdown-button {
-  color: white;
+  color: black;
 }
 .dropdown-button:active {
   color: #787562 !important;
@@ -176,8 +159,6 @@ input, textarea, select {
 }
 
 /* the following code was already in this file... I haven't touched it */
-body {
-  margin-bottom: 100px; }
 
 .footer {
   position: absolute;
@@ -191,5 +172,7 @@ body {
         font-size: 100px;
     }
 }
+
+
 
 /*# sourceMappingURL=_layout.css.map */
