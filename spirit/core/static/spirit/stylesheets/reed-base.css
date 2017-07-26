@@ -11,43 +11,54 @@ but be careful as it may also override code in this style sheet :) -corb */
 }
 
 html {
+  font-family: "Raleway";
   font-size: 16px;
   line-height: 24px;
   color: black;
-  background-color: white;
   position: relative;
   min-height: 100%;
   overflow-x: hidden;
 }
 
-body {
+html, body {
+  height: 100%;
   width: 100%;
+  margin: 0;
 }
-
 
 /* governs styling of username in forum posts */
 .username {
-  color: black;
+  color: #4d5a77;
   font-size: 17px;
   text-decoration: underline;
-  background-color: #85070A !important;
 }
 
 /* governs header/banner across all pages */
+.header {
+  padding: 0;
+  margin: 0;
+}
 
 .header-banner {
     background-color: #85070A;
+    background-image: url("../images/griffin.png");
+    background-repeat: no-repeat;
+    background-size: 140px 150px;
     text-align: left;
     padding-left: 40px; /*4.25rem; /*85px; */
     margin: 0;
-    width: 100% !important;
+    width: 100%;
+    position: absolute;
 }
 
 #headertext {
   font-family: times, serif;
-  text-align: left;
   font-size: 1.875rem /* 1rem = 16px, 1.875rem = 30px */;
+  font-weight: lighter;
   color: white;
+  text-align: left;
+  position: relative;
+  margin-bottom: 0;
 }
 
 .header-div {
@@ -58,13 +69,12 @@ body {
 .forumtopnav {
     overflow: hidden;
     width: 350px;
-    padding-top: 0;
 }
 
 .forumtopnav a {
     overflow: hidden;
     display: inline-block;
-    padding: 10px;
+    padding: 4px;
     padding-left: 0;
     padding-top: 2px;
     color: #f2f2f2;
@@ -73,6 +83,7 @@ body {
     font-family: 'Myriad', sans-serif;
     letter-spacing: 1px;
 }
+
 .forumtopnav a:hover {
   color: #787562;
   transition-delay: .15s; /* delays for .15 seconds */
@@ -92,42 +103,75 @@ body {
 }
 
 /* governs the drop down menus throughout the forum */
-.menu li {
-  background-color: #85070A;
-  border-radius: 5px;
+
+.header-tab-link {
+  color: white;
+  position: relative;
+  right: 20px;
+  top: 8px;
+  font-family: 'Myriad', sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: lighter;
 }
+
+.header-tab-link:hover {
+  color: black;
+}
+
+.header-tabs-content {
+  position: relative;
+  top: 106px;
+}
+
+.menu {
+  background-color: rgba(239,232,232,0.7);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.menu li {
+  background-color: rgba(239,232,232,0);
+}
+
 .menu a {
   color: black;
 }
+
 .menu a:hover {
-  color: #787562;
+  font-weight: bolder;
 }
 .menu li:hover {
   white-space: nowrap;
-  border-radius: 5px;
-  text-transform: none;
 }
+
 .dropdown-button {
   color: black;
 }
-.dropdown-button:active {
-  color: #787562 !important;
-}
+
 .dropdown-button:hover {
-  color: #787562 !important;
+  color: #4d5a77 !important;
 }
 
 /* governs button styling across forum ... could be improved */
+.pagecontent {
+  position: relative;
+  top: 125px;
+  width: 100%;
+  padding: 0 20px;
+}
+
 .button {
-  border-radius: 15px;
-  border: 1px solid black !important;
-  box-shadow: 1px 4px;
+  border-radius: 2px;
   outline: none !important;
+  background-color: #4d5a77 !important;
+  color: white !important;
+  font-weight: lighter;
 }
 
 .button:hover {
-  box-shadow: 1px 4px black;
-  color: black !important;
+  color: #4d5a77 !important;
+  background-color: #efe8e8 !important;
 }
 
 /* governs input text on forms throughout the forum.
@@ -140,21 +184,14 @@ input, textarea, select {
 /* styling for "admin" page */
 
 .statistics-box {
-  border-radius : 15px;
-  border: 7px solid #787562;
-  text-transform: uppercase;
   box-shadow: 0px 0px 0px 1px black;
-  background-color : white;
-  color: maroon;
+  background-color: white;
+  color: #4d5a77;
   margin : auto;
 }
 
 .messages-info {
-  border-radius: 15px;
   background-color: white;
-  color: maroon;
-  border: 7px solid #787562;
-  text-transform: uppercase;
   box-shadow: 0px 0px 0px 1px black;
 }
 
@@ -162,10 +199,10 @@ input, textarea, select {
 
 .footer {
   position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 100px;
-  width: 100%; }
+  width: 100%;
+  height: 20px;
+
+}
 
 @media screen and (max-width: 780) {
     .username {
