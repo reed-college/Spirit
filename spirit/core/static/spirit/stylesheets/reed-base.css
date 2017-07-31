@@ -226,9 +226,10 @@ input, textarea, select {
 
 /* this hides the course number search bar but keeps it on 
 the page so that the layout doesn't get screwy */
-.course-number-form {
+
+/*.course-number-form {
   visibility: hidden;
-}
+}*/
 
 .new-topic {
   width: 200px !important;
