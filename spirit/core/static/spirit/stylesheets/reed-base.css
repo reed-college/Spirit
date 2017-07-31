@@ -132,6 +132,7 @@ html, body {
 
 .menu li {
   background-color: rgba(239,232,232,0);
+  width: 180px;
 }
 
 .menu a {
@@ -141,12 +142,17 @@ html, body {
 .menu a:hover {
   font-weight: bolder;
 }
-.menu li:hover {
+/*.menu li:hover {
   white-space: nowrap;
-}
+}*/
 
 .dropdown-button {
   color: black;
+  width: 250px !important;
+}
+
+.categories {
+    width: 220px !important;
 }
 
 .dropdown-button:hover {
@@ -174,6 +180,10 @@ html, body {
   background-color: #efe8e8 !important;
 }
 
+.create-question {
+
+}
+
 /* governs input text on forms throughout the forum.
 ie: when one is writing a post or inputting course #'s */
 input, textarea, select {
@@ -195,19 +205,55 @@ input, textarea, select {
   box-shadow: 0px 0px 0px 1px black;
 }
 
-/* the following code was already in this file... I haven't touched it */
 
-.footer {
+/*this is the original spirit code for the footer:
+
+.footer {              
   position: absolute;
   width: 100%;
   height: 20px;
+}*/
 
+.footer-logo {
+  position: fixed;
+  bottom: 10px;
+  color: #4d5a77;
+} 
+.footer-logo:hover {
+  color: #4d5a77 !important;
+  background-color: #efe8e8 !important;
 }
+
+/* this hides the course number search bar but keeps it on 
+the page so that the layout doesn't get screwy */
+.course-number-form {
+  visibility: hidden;
+}
+
+.new-topic {
+  width: 200px !important;
+  float: right;
+}
+
 
 @media screen and (max-width: 780) {
     .username {
         font-size: 100px;
     }
+}
+@media screen and (max-width: 767) {
+  .create-question {
+    width: 1% !important;
+  }
+}
+
+.mobile-nav {
+   width: 100%;
+}
+
+.mobile-nav * li {
+   width: 32%;
+   text-align: center;
 }
 
 
