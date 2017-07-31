@@ -204,12 +204,43 @@ input, textarea, select {
 
 }
 
-@media screen and (max-width: 780) {
-    .username {
-        font-size: 100px;
+@media screen and (max-width: 767px) {
+    .banner {
+        background-image: none;
+        padding-left:0rem;
+        padding-bottom: 0rem;
     }
-}
 
+    .topnav a {
+        font-size: 0.7rem;
+    }
+
+    .bannertext {
+        font-size: 1rem;
+        float: left;
+        padding-left: 2rem;
+        margin: 0;
+        position: relative;
+        left: -30px;
+        top: -10px;
+    }
+
+    .topnav {
+        overflow: hidden;
+        position: relative;
+        left: -35px;
+        bottom: 10px;
+    }
+
+    .topnav a {
+        margin-right: 7px;
+    }
+
+    .topnav .menu-element.open {
+        height:auto
+    }
+
+}
 
 
 /*# sourceMappingURL=_layout.css.map */
