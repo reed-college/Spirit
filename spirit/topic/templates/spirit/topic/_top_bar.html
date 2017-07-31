@@ -1,3 +1,5 @@
+
+
 {% load i18n %}
 <div class="container">
     <header class="question-title">
@@ -53,10 +55,12 @@
     
   <div class="new-topic">
     {% if category %}
-      <a class="button" href="{% url "spirit:topic:publish" category.pk %}">{% trans "Create Question" %}</a>
+      <a class="create-question button" href="{% url "spirit:topic:publish" category.pk %}">{% trans "Create Question" %}</a>
     {% else %}
-      <a class="button" href="{% url "spirit:topic:publish" %}">{% trans "Create Question" %}</a>
+      <a class="create-question button" href="{% url "spirit:topic:publish" %}">{% trans "Create Question" %}</a>
     {% endif %}
   </div>
   
 </div>
+
+
