@@ -18,60 +18,94 @@
                      --><li><a class="header-tab-link js-tab" href="{% url "spirit:user:menu" %}" data-related=".js-user-content"> {{ user.username }} <i class="fa fa-chevron-down"></i></a></li>
                     </ul>
             </div>
-            <div class="hidden-xs">
-                    <div class="topnav" id="myTopnav">
-                        <a class="menu-element" href="{% url "tutor:index" %}">HOMEPAGE</a>
-                        <a class="menu-element" href="{% url "tutor:inbox" %}">MESSAGES</a>
-                        <a class="menu-element" href="{% url "spirit:index" %}">FORUM</a>
-                    </div>
-                </div>
-                <div class="mobile-nav visible-xs-inline-block">
-                    <ul class="nav nav-pills">
-                        <li>
-                            <a href="{% url "tutor:index" %}">
-                                <span style="font-size: 2em;">
-                                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="menu-element" href="{% url "tutor:inbox" %}">
-                                <span style="font-size: 2em;">
-                                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{% url "spirit:index" %}">
-                                <span style="font-size: 2em;">
-                                    <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-
-                </div>
-
+            <div class="forumtopnav">
+                <a href="/">HOMEPAGE</a>
+                <a href="/inbox">MESSAGES </a>
+                <a href="/forum/">FORUM</a>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="username_login">
-                {% if user.username %}
-                <p>You are currently logged in as: {{user.username}}</p>
-                {% else %}
-                <p>You are not logged in.</p>
-                {% endif %}
-                <div class="about">
-                    <a href="{% url "tutor:about" %}" >About Us</a>
-                </div>
-                <h6 class="login_logout">{% if user.username %}<a class="myButton" href= "{% url "admin:logout"%}">LOG OUT</a>{% else %}<a class="myButton" href="{% url "admin:index" %}">LOG IN</a>{% endif%}</h6>
 
-            </div>
-        </div>
-    </div>
-        </div>
+            <div class=“mobile-nav visible-xs-inline-block”>
+                   <ul class=“nav nav-pills”>
+                       <li>
+                           <a href="/">
+                               <span style=“font-size: 2em;“>
+                                   <span class=“glyphicon glyphicon-home” aria-hidden=“true”></span>
+                               </span>
+                           </a>
+                       </li>
+                       <li>
+                           <a class="menu-element" href="/inbox">
+                               <span style=“font-size: 2em;“>
+                                   <span class=“glyphicon glyphicon-envelope” aria-hidden=“true”></span>
+                               </span>
+                           </a>
+                       </li>
+                       <li>
+                           <a href=“/forum/“>
+                               <span style=“font-size: 2em;“>
+                                   <span class=“glyphicon glyphicon-blackboard” aria-hidden=“true”></span>
+                               </span>
+                           </a>
+                       </li>
+                   </ul>
+
+               </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div class="header-tabs-content">
                     <div class="header-tab-content js-tab-content js-user-content">
                         <nav class="header-nav">
@@ -80,6 +114,7 @@
                                 <li><a class="menu-link" href="{% url "spirit:topic:index-active" %}">{% trans "Questions" %}</a></li>
                                 <li><a class="menu-link" href="{% url "spirit:topic:unread:index" %}">{% trans "Unread questions" %}</a></li>
                                 <li><a class="menu-link" href="{% url "spirit:topic:private:index" %}">{% trans "Private questions" %}</a></li>
+                                <li><a class="menu-link" href="{% url "tutor:about" %}">{% trans "About us" %}</a></li>
 
                                 {% if user.st.is_administrator %}
                                     <li><a class="menu-link" href="{% url "spirit:admin:index" %}">{% trans "Admin" %}</a></li>
