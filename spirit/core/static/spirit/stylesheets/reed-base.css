@@ -24,6 +24,8 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
+  background-image: url('../images/Studyingbooks.jpg');
+  background-attachment: fixed;
 }
 
 /* governs styling of username in forum posts */
