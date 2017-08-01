@@ -28,23 +28,20 @@
     </div>
 
     <div class="course-number-form">
-      {% load static %}
-      <script type="text/javascript" src="{% static 'select_course_no.js' %}"></script>
       <form method="get">
         <div class="course-number-label">
           {% trans "Course Number:" %}
         </div>
         <div class="course-number-field">
           {% if course_no %}
-          <input id="course_no" type="number" value="{{ course_no }}"></input>
+          <input id="course_no" name="course_no" type="number" value="{{ course_no }}"></input>
           {% else %}
-            <input id="course_no" type="number"></input>
+            <input id="course_no" name="course_no" type="number"></input>
           {% endif %}
         </div>
         <div class="course-number-button">
           <input class="button" type="submit" value="Go!">
         </div>
-      </form>
       </form>
     </div>
   </div>

@@ -13,7 +13,7 @@ from ..topic.models import Topic
 from .models import Category
 
 
-def detail(request, pk, slug, course_no):
+def detail(request, pk, slug):
     category = get_object_or_404(Category.objects.visible(),
                                  pk=pk)
 
@@ -30,6 +30,8 @@ def detail(request, pk, slug, course_no):
         .for_category(category=category)\
         .order_by('-is_globally_pinned', '-is_pinned', '-last_active')\
         .select_related('category')
+
+    course_no = request.GET.get('course_no')
 
     if course_no:
         topics = topics.filter(course_no=course_no)
