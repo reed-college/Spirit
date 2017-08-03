@@ -22,11 +22,13 @@ html {
 html, body {
   height: 100%;
   width: 100%;
+  max-width: 100% !important;
   margin: 0;
   background-image: url('../images/Studyingbooks.jpg');
   background-attachment: fixed;
-  overflow-x: hidden;
 }
+
+body
 
 /* governs styling of username in forum posts */
 .username {
@@ -168,9 +170,14 @@ html, body {
 /* governs button styling across forum ... could be improved */
 .pagecontent {
   position: relative;
-  top: 125px;
+  top: 105px;
   width: 100%;
   padding: 3% 3%;
+  margin: auto;
+  margin-top: 0px;
+  max-width: 68em;
+  background: white;
+  height: 100%;
 }
 
 .button {
