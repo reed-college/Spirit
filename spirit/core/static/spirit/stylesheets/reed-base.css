@@ -17,7 +17,6 @@ html {
   color: black;
   position: relative;
   min-height: 100%;
-  overflow-x: hidden;
 }
 
 html, body {
@@ -26,6 +25,7 @@ html, body {
   margin: 0;
   background-image: url('../images/Studyingbooks.jpg');
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 /* governs styling of username in forum posts */
