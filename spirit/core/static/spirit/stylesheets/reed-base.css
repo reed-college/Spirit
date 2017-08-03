@@ -59,12 +59,11 @@ html, body {
   font-weight: lighter;
   color: white;
   text-align: left;
-  position: relative;
   margin-bottom: 0;
 }
 
 .header-div {
-  white-space: nowrap;
+    white-space: nowrap;
     overflow: hidden;
     width:100%;
 }
@@ -106,7 +105,10 @@ html, body {
 }
 
 /* governs the drop down menus throughout the forum */
+.header-tabs {
+    height: 10px;
 
+}
 .header-tab-link {
   color: white;
   position: relative;
@@ -124,7 +126,7 @@ html, body {
 
 .header-tabs-content {
   position: relative;
-  top: 106px;
+  top: 140px;
 }
 
 .menu {
