@@ -12,7 +12,7 @@
 
   <div class="bar">
     <div class="categories js-tabs-container">
-        <a class="dropdown-button js-tab" href="#" data-related=".js-categories-content"> Select a subject <i class="fa fa-chevron-down"></i></a>
+        <a class="dropdown-button js-tab" href="#" data-related=".js-categories-content"> Filter by Subject <i class="fa fa-chevron-down"></i></a>
       <div class="tab-content js-tab-content js-categories-content">
         <ul class="menu">
           {% for c in categories %}
@@ -21,8 +21,8 @@
           {% if category.parent %}
             <li><a class="menu-link" href="{{ category.parent.get_absolute_url }}" >{% trans "All Subcategories" %}</a></li>
           {% else %}
-            <li><a class="menu-link" href="{% url "spirit:topic:index-active" %}" >{% trans "All Subjects" %}</a></li> 
-          {% endif %} 
+            <li><a class="menu-link" href="{% url "spirit:topic:index-active" %}" >{% trans "All Subjects" %}</a></li>
+          {% endif %}
         </ul>
       </div>
     </div>
@@ -36,7 +36,7 @@
         <form action="#" onSubmit="go_to_course_number('{% url "spirit:topic:index-active" %}')">
       {% endif %}
         <div class="course-number-label">
-          {% trans "Course Number:" %}
+          {% trans "Filter by Course Number:" %}
         </div>
         <div class="course-number-field">
           {% if course_no %}
@@ -52,7 +52,7 @@
       </form>
     </div>
   </div>
-    
+
   <div class="new-topic">
     {% if category %}
       <a class="create-question button" href="{% url "spirit:topic:publish" category.pk %}">{% trans "Create Question" %}</a>
@@ -60,7 +60,5 @@
       <a class="create-question button" href="{% url "spirit:topic:publish" %}">{% trans "Create Question" %}</a>
     {% endif %}
   </div>
-  
+
 </div>
-
-

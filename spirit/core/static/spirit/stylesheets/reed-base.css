@@ -66,11 +66,12 @@ html, body {
 .header-div {
   white-space: nowrap;
     overflow: hidden;
+    width:100%;
 }
 
 .forumtopnav {
     overflow: hidden;
-    width: 350px;
+    width: 100%;
 }
 
 .forumtopnav a {
@@ -151,6 +152,7 @@ html, body {
 .dropdown-button {
   color: black;
   width: 250px !important;
+  font-size: 17px;
 }
 
 .categories {
@@ -166,7 +168,7 @@ html, body {
   position: relative;
   top: 125px;
   width: 100%;
-  padding: 0 20px;
+  padding: 3% 3%;
 }
 
 .button {
@@ -182,9 +184,7 @@ html, body {
   background-color: #efe8e8 !important;
 }
 
-.create-question {
 
-}
 
 /* governs input text on forms throughout the forum.
 ie: when one is writing a post or inputting course #'s */
@@ -225,18 +225,35 @@ input, textarea, select {
   background-color: #efe8e8 !important;
 }
 
-/* this hides the course number search bar but keeps it on
-the page so that the layout doesn't get screwy */
-
-/*.course-number-form {
-  visibility: hidden;
-}*/
-
 .new-topic {
   width: 200px !important;
   float: right;
 }
 
+.course-number-form {
+    display: block !important;
+    margin: auto !important;
+    width: 30%;
+
+
+}
+.course-number-label {
+    width: 300px;
+    font-size: 17px;
+}
+.course-number-field .course-number-button {
+    width: 50px !important;
+    margin: auto !important;
+}
+.question-title {
+    text-align: center;
+}
+
+.question-title h1 {
+    margin: 0;
+    margin-bottom: 5%;
+    padding: 0;
+}
 
 @media screen and (max-width: 780) {
     .username {
@@ -244,19 +261,31 @@ the page so that the layout doesn't get screwy */
     }
 }
 @media screen and (max-width: 767) {
-  .create-question {
+  /*.create-question {
     width: 1% !important;
+  }*/
+
+  .mobile-nav {
+     width: 100%;
+  }
+
+  .mobile-nav * li {
+     width: 32%;
+     text-align: center;
+  }
+  .header-div {
+    white-space: nowrap;
+      overflow: hidden;
+      width:100%;
+  }
+
+  .forumtopnav {
+      overflow: hidden;
+      width: 100%;
   }
 }
 
-.mobile-nav {
-   width: 100%;
-}
 
-.mobile-nav * li {
-   width: 32%;
-   text-align: center;
-}
 
 
 
