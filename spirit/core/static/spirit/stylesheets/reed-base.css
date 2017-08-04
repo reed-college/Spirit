@@ -169,8 +169,6 @@ body
 
 /* governs button styling across forum ... could be improved */
 .pagecontent {
-  position: relative;
-  top: 105px;
   width: 100%;
   padding: 3% 3%;
   margin: auto;
