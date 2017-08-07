@@ -14,9 +14,13 @@ def tutor(request):
 tutor_patterns = [
     url(r'^$', tutor, name='index'),
     url(r'^about/$', tutor, name='about'),
+    url(r'^(?P<course_id>[0-9]+)/tutors/$', tutor, name='tutors'),
+    url(r'^inbox/$', tutor, name='inbox'),
 ]
 
 
+
+
 urlpatterns += [
-    url(r'^tutor/', include(tutor_patterns, namespace='tutor', app_name='tutor')),
+    url(r'^tutoring/', include(tutor_patterns, namespace='tutor', app_name='tutor')),
 ]
