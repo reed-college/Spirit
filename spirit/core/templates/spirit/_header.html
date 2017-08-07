@@ -8,9 +8,9 @@
                 </a>
             </div>
             <div class="forumtopnav">
-                <a href="/">HOMEPAGE</a>
-                <a href="/inbox">MESSAGES </a>
-                <a href="/forum/">FORUM</a>
+                <a href="{% url "spirit:index" %}">FORUM</a>
+                <a href="{% url "tutor:inbox" %}">MESSAGES</a>
+                <a href="{% url "tutor:index" %}">TUTORING</a>
             </div>
             <div class=“mobile-nav visible-xs-inline-block”>
                  <ul class=“nav nav-pills”>
