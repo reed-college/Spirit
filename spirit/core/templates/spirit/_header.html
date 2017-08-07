@@ -9,9 +9,9 @@
                 </a>
             </div>
             <div class="forumtopnav">
-                <a href="{% url "tutor:index" %}">TUTORING</a>
-                <a href="{% url "tutor:inbox" %}">MESSAGES</a>
                 <a href="{% url "spirit:index" %}">FORUM</a>
+                <a href="{% url "tutor:inbox" %}">MESSAGES</a>
+                <a href="{% url "tutor:index" %}">TUTORING</a>
             </div>
             <div class="user-tabs">
                 {% if user.is_authenticated %}
