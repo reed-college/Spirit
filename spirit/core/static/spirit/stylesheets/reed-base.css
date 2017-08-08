@@ -171,8 +171,11 @@ body
 .pagecontent {
   width: 100%;
   padding: 3% 3%;
-  margin: auto;
   margin-top: 0px;
+}
+
+.header, .pagecontent {
+  margin: auto;
   max-width: 68em;
   background: white;
 }
