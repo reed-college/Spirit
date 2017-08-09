@@ -22,11 +22,13 @@ html {
 html, body {
   height: 100%;
   width: 100%;
+  max-width: 100% !important;
   margin: 0;
   background-image: url('../images/Studyingbooks.jpg');
   background-attachment: fixed;
-  overflow-x: hidden;
 }
+
+body
 
 /* governs styling of username in forum posts */
 .username {
@@ -104,53 +106,6 @@ html, body {
   color: #787562 !important;
 }
 
-/* governs the drop down menus throughout the forum */
-.header-tabs {
-    height: 10px;
-
-}
-.header-tab-link {
-  color: white;
-  position: relative;
-  right: 20px;
-  top: 8px;
-  font-family: 'Myriad', sans-serif;
-  font-size: 15px;
-  letter-spacing: 1px;
-  font-weight: lighter;
-}
-
-.header-tab-link:hover {
-  color: black;
-}
-
-.header-tabs-content {
-  position: relative;
-  top: 140px;
-}
-
-.menu {
-  background-color: rgba(239,232,232,0.7);
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.menu li {
-  background-color: rgba(239,232,232,0);
-  width: 180px;
-}
-
-.menu a {
-  color: black;
-}
-
-.menu a:hover {
-  font-weight: bolder;
-}
-/*.menu li:hover {
-  white-space: nowrap;
-}*/
-
 .dropdown-button {
   color: black;
   width: 250px !important;
@@ -167,10 +122,15 @@ html, body {
 
 /* governs button styling across forum ... could be improved */
 .pagecontent {
-  position: relative;
-  top: 125px;
   width: 100%;
   padding: 3% 3%;
+  margin-top: 0px;
+}
+
+.header, .pagecontent {
+  margin: auto;
+  max-width: 68em;
+  background: white;
 }
 
 .button {

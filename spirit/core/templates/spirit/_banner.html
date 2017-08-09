@@ -1,0 +1,116 @@
+<style>
+.banner {
+  background-color: #85070A;
+  background-image: url("static/images/REEDGRIFFIN.png");
+  background-repeat: no-repeat;
+  background-size: 140px 150px;
+  text-align: left;
+  padding-left: 40px; /*4.25rem; /*85px; */
+  padding-bottom: 10px;
+  font-size: 20px;
+  line-height: 1.42857143;
+}
+
+.bannerdiv {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.bannertext {
+	padding-top: 20px;
+	margin: auto;
+	font-size: 1.5em;
+	color: white;
+	font-family: times, 'Times New Roman', Garamond, serif;
+}
+
+
+.banner h1 {
+	color: white;
+	font-family: times, 'Times New Roman', Garamond, serif;
+	letter-spacing: 0.1em; /*2px;*/
+  font-weight: normal;
+}
+
+.banner .topnav {
+    overflow: hidden;
+}
+
+
+.banner .topnav a {
+	overflow: hidden;
+    display: inline-block;
+    padding-right: 0.2em;
+    padding-left: 0;
+    padding-top: 0.375em;
+    color: #f2f2f2;
+    text-decoration: none;
+	font-family: 'Myriad', Helvetica, Arial, Verdana, sans-serif;
+    letter-spacing: 0.05em; /*1px;*/
+}
+
+.banner .topnav a:hover {
+    color: #787562;
+	transition-delay: .15s; /* delays for .15 seconds */
+	-webkit-transition-delay: .15s; /* ^for Safari & Chrome */
+}
+
+.banner .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.banner .menu-element {
+    padding-right: 0.45em;
+    font-size: 0.6em; /*12px;*/
+}
+
+.banner .visible-xs-inline-block {
+    display: none;
+}
+
+
+</style>
+<div class="banner">
+    <div id="bannerdiv">
+            <a href="{% url 'spirit:index' %}">
+                <h1 class="bannertext">REED COLLEGE</h1>
+            </a>
+    </div>
+<!-- This is the main navigation bar for our webapp -->
+    <div class="hidden-xs">
+        <div class="topnav" id="myTopnav">
+            <a class="menu-element" href="{% url "spirit:index" %}">FORUM</a>
+            <a class="menu-element" href="{% url "tutor:inbox" %}">MESSAGES</a>
+            <a class="menu-element" href="{% url "tutor:index" %}">TUTORING</a>
+        </div>
+    </div>
+<!-- This code displays icons instead of words for the menu on mobile. -->
+    <div class="mobile-nav visible-xs-inline-block">
+        <ul class="nav nav-pills">
+            <li>
+                <a href="{% url "tutor:index" %}">
+                    <span style="font-size: 2em;">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="menu-element" href="{% url "tutor:inbox" %}">
+                    <span style="font-size: 2em;">
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url "spirit:index" %}">
+                    <span style="font-size: 2em;">
+                        <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
