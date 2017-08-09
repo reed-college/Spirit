@@ -106,53 +106,6 @@ body
   color: #787562 !important;
 }
 
-/* governs the drop down menus throughout the forum */
-.header-tabs {
-    height: 10px;
-
-}
-.header-tab-link {
-  color: white;
-  position: relative;
-  right: 20px;
-  top: 8px;
-  font-family: 'Myriad', sans-serif;
-  font-size: 15px;
-  letter-spacing: 1px;
-  font-weight: lighter;
-}
-
-.header-tab-link:hover {
-  color: black;
-}
-
-.header-tabs-content {
-  position: relative;
-  top: 140px;
-}
-
-.menu {
-  background-color: rgba(239,232,232,0.7);
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.menu li {
-  background-color: rgba(239,232,232,0);
-  width: 180px;
-}
-
-.menu a {
-  color: black;
-}
-
-.menu a:hover {
-  font-weight: bolder;
-}
-/*.menu li:hover {
-  white-space: nowrap;
-}*/
-
 .dropdown-button {
   color: black;
   width: 250px !important;
