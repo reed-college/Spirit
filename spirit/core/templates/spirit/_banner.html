@@ -65,10 +65,79 @@
     font-size: 0.6em; /*12px;*/
 }
 
-.banner .visible-xs-inline-block {
-    display: none;
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('static/spirit/fonts/glyphicons-halflings-regular.eot');
+  src: url('static/spirit/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('static/spirit/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('static/spirit/fonts/glyphicons-halflings-regular.woff') format('woff'), url('static/spirit/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('static/spirit/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+.glyphicon-home:before {
+  content: "\e021";
+}
+
+.glyphicon-inbox:before {
+  content: "\e028";
+}
+
+.glyphicon-education:before {
+  content: "\e233";
+}
+
+@media (min-width: 767px) {
+  .banner .visible-xs-table {
+      display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner .visible-xs-table {
+    display: table !important;
+  }
+
+  .banner .hidden-xs {
+    display: none !important;
+  }
+
+  .banner {
+      background-image: none;
+      padding-left:0px;
+      padding-bottom: 0px;
+  }
+
+  .bannertext {
+      font-size: 1em;
+      float: left;
+      padding-left: 2em;
+      margin: 0;
+      position: relative;
+      left: -30px;
+      top: -15px;
+  }
+}
+
+.mobile-nav{
+  width: 100%;
+  display: table;
+}
+
+.mobile-nav a {
+  color: #f2f2f2;
+
+  font-size: 2em;
+  text-align: center;
+  display: table-cell;
+}
 
 </style>
 <div class="banner">
@@ -81,36 +150,21 @@
     <div class="hidden-xs">
         <div class="topnav" id="myTopnav">
             <a class="menu-element" href="{% url "spirit:index" %}">FORUM</a>
-            <a class="menu-element" href="{% url "tutor:inbox" %}">MESSAGES</a>
             <a class="menu-element" href="{% url "tutor:index" %}">TUTORING</a>
+            <a class="menu-element" href="{% url "tutor:inbox" %}">MESSAGES</a>
         </div>
     </div>
 <!-- This code displays icons instead of words for the menu on mobile. -->
-    <div class="mobile-nav visible-xs-inline-block">
-        <ul class="nav nav-pills">
-            <li>
-                <a href="{% url "tutor:index" %}">
-                    <span style="font-size: 2em;">
-                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a class="menu-element" href="{% url "tutor:inbox" %}">
-                    <span style="font-size: 2em;">
-                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="{% url "spirit:index" %}">
-                    <span style="font-size: 2em;">
-                        <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
-                    </span>
-                </a>
-            </li>
-        </ul>
-
+    <div class="mobile-nav visible-xs-table">
+        <a href="{% url "spirit:index" %}">
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+        </a>
+        <a href="{% url "tutor:index" %}">
+            <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+        </a>
+        <a href="{% url "tutor:inbox" %}">
+            <span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+        </a>
     </div>
 
 </div>
