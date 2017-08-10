@@ -1,14 +1,18 @@
 <style>
 .banner {
   background-color: #85070A;
-  background-image: url("static/images/REEDGRIFFIN.png");
+  background-image: url("/static/images/REEDGRIFFIN.png");
   background-repeat: no-repeat;
   background-size: 140px 150px;
   text-align: left;
   padding-left: 40px; /*4.25rem; /*85px; */
   padding-bottom: 10px;
   font-size: 20px;
-  line-height: 1.42857143;
+  line-height: 1.42857143 !important;
+}
+
+.banner h1 {
+  line-height: inherit !important;
 }
 
 .bannerdiv {
@@ -70,7 +74,7 @@
   src: url('static/spirit/fonts/glyphicons-halflings-regular.eot');
   src: url('static/spirit/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('static/spirit/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('static/spirit/fonts/glyphicons-halflings-regular.woff') format('woff'), url('static/spirit/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('static/spirit/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
-.glyphicon {
+.banner .glyphicon {
   position: relative;
   top: 1px;
   display: inline-block;
@@ -82,15 +86,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.glyphicon-home:before {
+.banner .glyphicon-home:before {
   content: "\e021";
 }
 
-.glyphicon-inbox:before {
+.banner .glyphicon-inbox:before {
   content: "\e028";
 }
 
-.glyphicon-education:before {
+.banner .glyphicon-education:before {
   content: "\e233";
 }
 
@@ -126,12 +130,12 @@
   }
 }
 
-.mobile-nav{
+.banner .mobile-nav{
   width: 100%;
   display: table;
 }
 
-.mobile-nav a {
+.banner .mobile-nav a {
   color: #f2f2f2;
 
   font-size: 2em;
@@ -141,10 +145,10 @@
 
 </style>
 <div class="banner">
-    <div id="bannerdiv">
-            <a href="{% url 'spirit:index' %}">
-                <h1 class="bannertext">REED COLLEGE</h1>
-            </a>
+    <div class="bannerdiv">
+        <a href="{% url 'spirit:index' %}">
+            <h1 class="bannertext">REED COLLEGE</h1>
+        </a>
     </div>
 <!-- This is the main navigation bar for our webapp -->
     <div class="hidden-xs">
