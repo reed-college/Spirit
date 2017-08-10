@@ -65,16 +65,6 @@
     font-size: 0.6em; /*12px;*/
 }
 
-
-.mobile-nav {
-    width: 100%;
-}
-
-.mobile-nav * li {
-    width: 32%;
-    text-align: center;
-}
-
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('static/spirit/fonts/glyphicons-halflings-regular.eot');
@@ -105,19 +95,50 @@
 }
 
 @media (min-width: 767px) {
-  .banner .visible-xs-inline-block {
+  .banner .visible-xs-table {
       display: none !important;
   }
 }
 
 @media (max-width: 767px) {
-  .banner .visible-xs-inline-block {
-    display: inline-block !important;
+  .banner .visible-xs-table {
+    display: table !important;
   }
-  .banner .invisible-xs {
+
+  .banner .hidden-xs {
     display: none !important;
   }
+
+  .banner {
+      background-image: none;
+      padding-left:0px;
+      padding-bottom: 0px;
+  }
+
+  .bannertext {
+      font-size: 1em;
+      float: left;
+      padding-left: 2em;
+      margin: 0;
+      position: relative;
+      left: -30px;
+      top: -15px;
+  }
 }
+
+.mobile-nav{
+  width: 100%;
+  display: table;
+}
+
+.mobile-nav a {
+  color: #f2f2f2;
+
+  font-size: 2em;
+  text-align: center;
+  display: table-cell;
+}
+
 </style>
 <div class="banner">
     <div id="bannerdiv">
@@ -134,21 +155,15 @@
         </div>
     </div>
 <!-- This code displays icons instead of words for the menu on mobile. -->
-    <div class="mobile-nav visible-xs-inline-block">
+    <div class="mobile-nav visible-xs-table">
         <a href="{% url "spirit:index" %}">
-            <span style="font-size: 2em;">
-                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-            </span>
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
         </a>
-        <a class="menu-element" href="{% url "tutor:index" %}">
-            <span style="font-size: 2em;">
-                <span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
-            </span>
+        <a href="{% url "tutor:index" %}">
+            <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
         </a>
         <a href="{% url "tutor:inbox" %}">
-            <span style="font-size: 2em;">
-                <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
-            </span>
+            <span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
         </a>
     </div>
 
