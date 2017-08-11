@@ -102,8 +102,11 @@ body
 .row-title a{
   color: black !important;
 }
-.row-title a:hover{
+.row-title a:hover, .row-info a:hover{
   color: #787562 !important;
+}
+.row-info, .row-info a {
+    color: black;
 }
 
 .dropdown-button {
@@ -123,14 +126,14 @@ body
 /* governs button styling across forum ... could be improved */
 .pagecontent {
   width: 100%;
-  padding: 3% 3%;
+  padding: 3% 3% 3% 3%;
   margin-top: 0px;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .header, .pagecontent {
   margin: auto;
   max-width: 68em;
-  background: white;
 }
 
 .button {
@@ -146,8 +149,24 @@ body
   background-color: #efe8e8 !important;
 }
 
-
-
+.header-tab-link, .menu-link{
+    color: black;
+}
+.nav li a{
+    color: black;
+}
+.comment-actions li a {
+    color: black;
+}
+.reply-markdown li a {
+    color: black;
+}
+.username {
+    color: black;
+}
+.head-edit-link {
+    color: black;
+}
 /* governs input text on forms throughout the forum.
 ie: when one is writing a post or inputting course #'s */
 input, textarea, select {
@@ -195,18 +214,21 @@ input, textarea, select {
 .course-number-form {
     display: block !important;
     margin: auto !important;
-    width: 30%;
+    width: 140px;
+}
 
+.course-number-field {
+    width: 60px;
+}
 
+.course-number-button {
+    width: 40px;
 }
 .course-number-label {
-    width: 300px;
+    width: 200px;
     font-size: 17px;
 }
-.course-number-field .course-number-button {
-    width: 50px !important;
-    margin: auto !important;
-}
+
 .question-title {
     text-align: center;
 }
@@ -217,32 +239,30 @@ input, textarea, select {
     padding: 0;
 }
 
+.create-question {
+    width: 144px;
+    clear: left;
+}
+
 @media screen and (max-width: 780) {
     .username {
         font-size: 100px;
     }
 }
 @media screen and (max-width: 767) {
-  /*.create-question {
-    width: 1% !important;
-  }*/
-
-  .mobile-nav {
-     width: 100%;
-  }
-
-  .mobile-nav * li {
-     width: 32%;
-     text-align: center;
-  }
   .header-div {
     white-space: nowrap;
       overflow: hidden;
       width:100%;
+  }
+  .new-topic {
+      width: 100px !important;
   }
 
   .forumtopnav {
       overflow: hidden;
       width: 100%;
   }
+
+
 }

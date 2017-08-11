@@ -1,12 +1,10 @@
-
-
 {% load i18n %}
 <div class="container">
     <header class="question-title">
       {% if category %}
-        <h1>Questions in {{ category.title }}</h1>
+        <h1 class = "search-title">Questions in {{ category.title }}</h1>
       {% else %}
-        <h1>Questions in all subjects</h1>
+        <h1 class = "search-title">Questions in all subjects</h1>
       {% endif %}
     </header>
 
