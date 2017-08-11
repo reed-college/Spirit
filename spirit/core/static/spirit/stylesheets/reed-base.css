@@ -102,8 +102,11 @@ body
 .row-title a{
   color: black !important;
 }
-.row-title a:hover{
+.row-title a:hover, .row-info a:hover{
   color: #787562 !important;
+}
+.row-info, .row-info a {
+    color: black;
 }
 
 .dropdown-button {
@@ -146,7 +149,24 @@ body
   background-color: #efe8e8 !important;
 }
 
-
+.header-tab-link, .menu-link{
+    color: black;
+}
+.nav li a{
+    color: black;
+}
+.comment-actions li a {
+    color: black;
+}
+.reply-markdown li a {
+    color: black;
+}
+.username {
+    color: black;
+}
+.head-edit-link {
+    color: black;
+}
 /* governs input text on forms throughout the forum.
 ie: when one is writing a post or inputting course #'s */
 input, textarea, select {
@@ -243,6 +263,6 @@ input, textarea, select {
       overflow: hidden;
       width: 100%;
   }
- 
+
 
 }
