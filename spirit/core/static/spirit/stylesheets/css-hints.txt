@@ -1,3 +1,27 @@
+Translated from Spanish
+
+Components: specific elements of the page (partials), constructed using objects (extensions)
+Objects: generic elements, reusable (objects)
+Patterns: reusable skins, NO classes, to extend / inherit
+
+Rules:
+.Not using IDs
+.No extend classes (only% placeholders)
+.No Chain Selectors
+.3 maximum nesting levels
+.Convention in classes (or use BEM): http://thesassway.com/advanced/modular-css-naming-conventions
+. Write / import in order: reset, elements (h1, ul ...), objects, components, style trumps ... https://github.com/csswizardry/CSS-Guidelines#source-order
+. Use vague object names (eg .media, ui-list), and object-specific extensions / children (.user-avatar-img)
+.No use height (except in img), use line-height
+. Do not use width in components, let it expand according to the parent / grid.
+.Try to use only the margin-bottom and margin-left elements in the blocks http://csswizardry.com/2012/06/single-direction-margin-declarations/
+.https: //github.com/csswizardry/CSS-Guidelines
+. Use multiples of main line-height (html {}) for margins, paddings, line-heights. Keep a certain vertical rhythm
+.Usar modular-scale for font-size and line-heights
+. Use rem + px to change the main font-size (html {}) at each breakpoint
+
+Original Text:
+
 componenetes: elementos especificos de la pagina (partials), construidos usando objetos (extensiones)
 objetos: elementos genericos, reutilizables (objects)
 patterns: skins reutilizables, NO clases, para extender/heredar
