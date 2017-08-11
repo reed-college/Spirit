@@ -243,12 +243,6 @@ input, textarea, select {
       overflow: hidden;
       width: 100%;
   }
-  .search-title {
-      font-size: 10px !important;
-      color: green !important;
-  }
- .course {
-     float: left;
- }
+ 
 
 }
