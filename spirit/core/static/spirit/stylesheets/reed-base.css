@@ -247,5 +247,8 @@ input, textarea, select {
       font-size: 10px !important;
       color: green !important;
   }
+ .course {
+     float: left;
+ }
 
 }
