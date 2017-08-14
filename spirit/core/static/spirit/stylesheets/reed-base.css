@@ -134,7 +134,6 @@ body
   color: #4d5a77 !important;
 }
 
-/* governs button styling across forum ... could be improved */
 .pagecontent {
   width: 100%;
   padding: 3% 3% 3% 3%;
@@ -257,6 +256,10 @@ input, textarea, select {
 .headline {
     font-size: 20px;
 }
+.row, .rows {
+    border: none !important;
+}
+
 
 @media screen and (max-width: 780) {
     .username {
