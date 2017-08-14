@@ -54,7 +54,22 @@ body
     width: 100%;
     position: absolute;
 }
+.header-link, .login-links a {
+    color: black;
+}
 
+.header-link {
+    margin: 10px;
+}
+
+.comment-body, .comment-text p {
+    width: 100%;
+}
+.search-title {
+    font-family: 'Nunito', Times,'Times New Roman', Garamond, serif;
+    font-size: 30px;
+    font-weight: normal;
+}
 #headertext {
   font-family: times, serif;
   font-size: 1.875rem /* 1rem = 16px, 1.875rem = 30px */;
@@ -123,12 +138,11 @@ body
   color: #4d5a77 !important;
 }
 
-/* governs button styling across forum ... could be improved */
 .pagecontent {
-  width: 100%;
-  padding: 3% 3% 3% 3%;
+  width: 90%;
+  padding: 3% 3% 2.5% 3%;
   margin-top: 0px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .header, .pagecontent {
@@ -209,6 +223,7 @@ input, textarea, select {
 .new-topic {
   width: 200px !important;
   float: right;
+  padding-top: 12px;
 }
 
 .course-number-form {
@@ -243,6 +258,24 @@ input, textarea, select {
     width: 144px;
     clear: left;
 }
+.headline {
+    font-size: 20px;
+}
+.row, .rows {
+    /*border-color: rgba(0,0,0, 0.3) !important;*/
+    border: none !important;
+}
+.rows {
+    margin-bottom: 0px;
+}
+.paginator {
+    height: 20px;
+}
+.paginator-pages{
+    margin-top: 40px;
+    text-align: left;
+}
+
 
 @media screen and (max-width: 780) {
     .username {
@@ -257,6 +290,9 @@ input, textarea, select {
   }
   .new-topic {
       width: 100px !important;
+  }
+  .headline {
+      font-size: 15px !important;
   }
 
   .forumtopnav {
