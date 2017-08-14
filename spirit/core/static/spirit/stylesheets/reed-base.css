@@ -256,7 +256,8 @@ input, textarea, select {
 
 .create-question {
     width: 144px;
-    clear: left;
+    clear: all;
+    float: right !important;
 }
 .headline {
     font-size: 20px;
