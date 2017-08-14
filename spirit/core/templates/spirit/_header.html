@@ -24,7 +24,7 @@
                                 <li><a class="menu-link" href="{% url "spirit:admin:index" %}">{% trans "Admin" %}</a></li>
                             {% endif %}
 
-                            <li><a class="menu-link js-post" href="{% url "spirit:user:auth:logout" %}?next={% firstof request.get_full_path|urlencode '/' %}">{% trans "Log out" %}</a></li>
+                            <li><a class="menu-link js-post" href="{{LOGOUT_URL}}?next={% firstof request.get_full_path|urlencode '/' %}">{% trans "Log out" %}</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -37,6 +37,6 @@
 
             </div>
         {% else %}
-            <a class="header-link" href="{% url "spirit:user:auth:login" %}?next={% firstof request.get_full_path|urlencode '/' %}">{% trans "Log in" %}</a>
+        <a class="header-link" href="{{LOGIN_URL}}?next={% firstof request.get_full_path|urlencode '/' %}">{% trans "Log in" %}</a>
         {% endif %}
 	</header>
