@@ -54,6 +54,17 @@ body
     width: 100%;
     position: absolute;
 }
+.header-link, .login-links a {
+    color: black;
+}
+
+.header-link {
+    margin: 10px;
+}
+
+.comment-body, .comment-text p {
+    width: 100%;
+}
 
 #headertext {
   font-family: times, serif;
@@ -243,6 +254,9 @@ input, textarea, select {
     width: 144px;
     clear: left;
 }
+.headline {
+    font-size: 20px;
+}
 
 @media screen and (max-width: 780) {
     .username {
@@ -257,6 +271,9 @@ input, textarea, select {
   }
   .new-topic {
       width: 100px !important;
+  }
+  .headline {
+      font-size: 15px !important;
   }
 
   .forumtopnav {
