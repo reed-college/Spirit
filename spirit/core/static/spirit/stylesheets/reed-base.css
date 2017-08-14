@@ -135,10 +135,10 @@ body
 }
 
 .pagecontent {
-  width: 100%;
+  width: 90%;
   padding: 3% 3% 3% 3%;
   margin-top: 0px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .header, .pagecontent {
@@ -219,6 +219,7 @@ input, textarea, select {
 .new-topic {
   width: 200px !important;
   float: right;
+  padding-top: 12px;
 }
 
 .course-number-form {
@@ -257,7 +258,15 @@ input, textarea, select {
     font-size: 20px;
 }
 .row, .rows {
+    /*border-color: rgba(0,0,0, 0.3) !important;*/
     border: none !important;
+}
+.rows {
+    margin-bottom: 0px;
+}
+.paginator-pages{
+    margin-top: 40px;
+    text-align: left;
 }
 
 
