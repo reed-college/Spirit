@@ -65,7 +65,11 @@ body
 .comment-body, .comment-text p {
     width: 100%;
 }
-
+.search-title {
+    font-family: 'Nunito', Times,'Times New Roman', Garamond, serif;
+    font-size: 30px;
+    font-weight: normal;
+}
 #headertext {
   font-family: times, serif;
   font-size: 1.875rem /* 1rem = 16px, 1.875rem = 30px */;
@@ -136,7 +140,7 @@ body
 
 .pagecontent {
   width: 90%;
-  padding: 3% 3% 3% 3%;
+  padding: 3% 3% 2.5% 3%;
   margin-top: 0px;
   background: rgba(255, 255, 255, 0.25);
 }
@@ -263,6 +267,9 @@ input, textarea, select {
 }
 .rows {
     margin-bottom: 0px;
+}
+.paginator {
+    height: 20px;
 }
 .paginator-pages{
     margin-top: 40px;
